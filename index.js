@@ -87,7 +87,7 @@ countryInput.onkeyup = async function () {
 const findPlaces = () => {
   if(countryInput.value.length > 1){
     sessionStorage.setItem("country", countryInput.value)
-    document.location.href = "http://localhost:5500/country.html";
+    document.location.href = "http://https://kritikasharma025.github.io/hotel-app-frontend/country.html";
   }
 }
 
