@@ -1,0 +1,181 @@
+.main {
+  padding: 0 !important;
+  margin: 0 !important;
+  background-image: url(../image/bg2.webp);
+}
+
+.main-ul > li > a {
+  /* color: rgba(92, 47, 21, 0.55) !important; */
+  color: black;
+  font-size: 1.2em;
+}
+.main-ul > li > a:hover {
+  color: rgb(196, 82, 6) !important;
+}
+.card-body > a {
+  text-align: center;
+  font-size: 2em;
+  display: block;
+  color: white;
+}
+.card-body > a :hover {
+  color: rgb(240, 238, 210);
+}
+
+
+#two {
+  background: #b35d60;
+}
+#three {
+  background: #d89d5c;
+}
+#h3-card {
+  color: #a23034;
+}
+.h5-card {
+  color: #c94848;
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+  font-size: 1.2em;
+  font-weight: normal;
+  letter-spacing: -1px;
+}
+.pass {
+  font-size: 0.835em;
+  padding: 0.4em 0;
+  color: #666;
+  line-height: 1.8em;
+  text-align: justify;
+}
+/* footer */
+.footer-h4 {
+  color: rgb(196, 82, 6);
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  line-height: 1.2;
+  font-weight: normal;
+  margin-top: 0px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+.footer-p {
+  font-size: 0.8125em;
+  color: rgb(209, 136, 103);
+  line-height: 1.8em;
+  text-align: center;
+  text-align: justify;
+}
+
+.footer-a {
+  color: rgb(209, 136, 103);
+  line-height: 1.1em;
+  font-size: 0.9em;
+  text-align: center;
+  text-align: justify;
+}
+.footer-a:hover {
+  color: rgb(5, 37, 143);
+}
+#footer-hr {
+  color: rgba(139, 86, 50, 0.92);
+}
+
+#footer-p {
+  color: rgb(209, 74, 41);
+  text-decoration: none;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 2%;
+}
+#footer-link {
+  color: rgb(209, 74, 41);
+  text-decoration: none;
+  
+  text-align: center;
+
+}
+
+/*----------------------------------------------------------------------------------  */
+
+/* About */
+.lab {
+  color: rgb(219, 150, 86);
+}
+.input {
+  border-color: rgb(219, 150, 86) !important;
+}
+.info {
+  color: rgb(219, 150, 86);
+  font-size: 0.95em;
+  line-height: 30px;
+}
+
+
+
+.facilities_area {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+
+.facilities_item {
+  border: 1px solid #777777;
+  border-radius: 10px;
+  background-color: rgba(249, 249, 255, 0.102);
+  padding: 31px 40px 37px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.facilities_item .sec_h4 {
+  padding-bottom: 18px;
+  color: black;
+}
+
+.facilities_item .sec_h4 i {
+  color: #f3c300;
+  font-size: 24px;
+  line-height: 25px;
+  margin-top: 3%;
+  display: inline-block;
+  vertical-align: bottom;
+  padding-right: 12px;
+}
+
+.facilities_item p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+
+.loader {
+  margin: auto;
+}
+
+.bg-purple {
+  background-color: #141619;
+}
+
+.text-overlay {
+  width: 25%;
+  height: auto;
+  position: absolute;
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 17rem 2rem 0 2rem;
+}
+
+.text-overlay-2 {
+  position: absolute;
+  color: white;
+  margin: 5rem 2rem 0 2rem;
+}
+
+.text-overlay-span {
+  line-height: 0 !important;
+  font-size: medium !important;
+  font-weight: 100;
+}
