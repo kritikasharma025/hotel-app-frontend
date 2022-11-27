@@ -1,4 +1,5 @@
 const rangeSlider = document.getElementById("customRange1");
+const rangeSlider2 = document.getElementById("customRange2");
 let endPrice;
 
 const displayLoader = () => {
@@ -10,6 +11,50 @@ const hideLoader = () => {
 }
 
 rangeSlider.oninput = async function () {
+  endPrice = this.value;
+  rangeSlider.setAttribute("title", endPrice)
+  displayLoader()
+  let data = await fetch("https://hotel-app-backend.onrender.com/api/place", {
+    method: "POST",
+    body: JSON.stringify({
+        endPrice:endPrice || 0
+      }),
+      headers:{
+        "Content-Type":"application/json",
+        "Accept":"application/json"
+      }
+  });
+
+  data = await data.json();
+  hideLoader()
+  document.getElementById("populateHere").innerHTML = ""
+  if(data.data.length > 0){
+    data.data.map((dat, key) => {
+        document.getElementById("populateHere").innerHTML =
+          document.getElementById("populateHere").innerHTML +
+          `
+            <div class="col-12 col-md-4 col-lg-3 my-2">
+                        <div class="card">
+                            <img src=${
+                              dat.image
+                            } class="card-img-top img-fluid rounded" alt=${key}>
+                            <div class="card-body ">
+                              <h5 class="card-title">${dat.city[0].toUpperCase()}${dat.city.slice( 1 )}</h5>
+                              <p class="card-text">Average Spent Rs. ${
+                                dat.price
+                              }</p>
+                             <a href="./page6.html" class="btn btn-primary btn-sm rounded fs-6 w-50 ">Go somewhere</a>
+                            </div>
+                          </div>
+                    </div>`;
+      });
+  }
+  else{
+    document.getElementById("populateHere").innerHTML = "<h3 class='text-center'>No Places to visit at this price range!</h3>"
+  }
+};
+
+rangeSlider2.oninput = async function () {
   endPrice = this.value;
   rangeSlider.setAttribute("title", endPrice)
   displayLoader()
