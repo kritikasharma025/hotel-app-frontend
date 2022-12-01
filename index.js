@@ -104,10 +104,11 @@ if (window.location.href === `${appUrl}/place%20near%20me.html`) {
   };
 }
 
-const countryInput = document.getElementById("countryName");
+let countryInput = document.getElementById("countryName");
 var suggestionListCountry = document.getElementById("suggestionListCountry");
 
 countryInput.onkeyup = async function () {
+  console.log("Key Pressed")
   const input = String(this.value).toLowerCase();
   let data = await fetch(
     `${serverUrl}/place/getUniqueCountry`,
@@ -147,7 +148,7 @@ const findPlaces = () => {
   }
 };
 
-let countryName = document.querySelector("#countryName");
+let countryName = document.querySelector("#countryNameHead");
 
 window.onload = async function () {
   countryName.innerHTML = `EXPLORE ${sessionStorage
