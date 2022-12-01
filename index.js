@@ -41,16 +41,14 @@ if (window.location.href === `${appUrl}/place%20near%20me.html`) {
           `
             <div class="col-12 col-md-4 col-lg-3 my-2">
                         <div class="card">
-                            <img src=${
-                              dat.image
-                            } class="card-img-top img-fluid rounded" alt=${key}>
+                            <img src=${dat.image
+          } class="card-img-top img-fluid rounded" alt=${key}>
                             <div class="card-body ">
                               <h5 class="card-title">${dat.city[0].toUpperCase()}${dat.city.slice(
             1
           )}</h5>
-                              <p class="card-text">Average Spent Rs. ${
-                                dat.price
-                              }</p>
+                              <p class="card-text">Average Spent Rs. ${dat.price
+          }</p>
                              <a href="./page6.html" class="btn btn-primary btn-sm rounded fs-6 w-50 ">Go somewhere</a>
                             </div>
                           </div>
@@ -88,14 +86,12 @@ if (window.location.href === `${appUrl}/place%20near%20me.html`) {
           `
             <div class="col-12 col-md-4 col-lg-3 my-2">
                         <div class="card">
-                            <img src=${
-                              dat.image
-                            } class="card-img-top img-fluid rounded" alt=${key}>
+                            <img src=${dat.image
+          } class="card-img-top img-fluid rounded" alt=${key}>
                             <div class="card-body ">
                               <h5 class="card-title">${dat.city[0].toUpperCase()}${dat.city.slice(1)}</h5>
-                              <p class="card-text">Average Spent Rs. ${
-                                dat.price
-                              }</p>
+                              <p class="card-text">Average Spent Rs. ${dat.price
+          }</p>
                              <a href="./page6.html" class="btn btn-primary btn-sm rounded fs-6 w-50 ">Go somewhere</a>
                             </div>
                           </div>
@@ -183,9 +179,8 @@ window.onload = async function () {
         `
                           <div class="col-12 col-md-4 col-lg-3 my-2">
                              <div class="card" style="width: 20rem;">
-                                <img src=${
-                                  dat.image
-                                } class="card-img-top img-fluid rounded" alt=${key}>
+                                <img src=${dat.image
+        } class="card-img-top img-fluid rounded" alt=${key}>
                                 <div class="card-body ">
                                   <h5 class="card-title">${dat.city[0].toUpperCase()}${dat.city.slice(
           1
