@@ -165,7 +165,7 @@
   color: white;
   font-size: 3rem;
   font-weight: 900;
-  margin: 17rem 2rem 0 2rem;
+  margin: 100px 2rem 0 2rem;
 }
 
 .text-overlay-2 {
@@ -178,4 +178,69 @@
   line-height: 0 !important;
   font-size: medium !important;
   font-weight: 100;
+}
+
+.city-overlay-text{
+  position: absolute; color:white; font-size:2rem; margin-left: 1rem;
+}
+
+@media only screen and (max-width: 1200px){
+  .text-overlay {
+    font-size: 2rem;
+  }
+
+  .city-overlay-text{
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .text-overlay {
+    font-size: 1.5rem;
+  }
+
+  .city-overlay-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .text-overlay {
+    width: 50%;
+  }
+
+  .text-overlay-span{
+    width: 100%;
+  }
+
+  .city-overlay-text {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 565px){
+  .text-overlay{
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 520px){
+  .text-overlay-span {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 370px){
+  .infoSection {
+    display: none;
+  }
+
+  .text-overlay{
+    margin-top: 10px;
+  }
+
+  .city-overlay-text {
+    margin-left: 5px;
+    font-size: 0.8rem;
+  }
 }

@@ -78,16 +78,6 @@
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
                       aria-expanded="false">
-                      Hotel
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Near me</a></li>
-                      <li><a class="dropdown-item" href="#">Country</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">
                       Place
                     </a>
                     <ul class="dropdown-menu">
@@ -118,15 +108,15 @@
             </div>
           </div>
         </header>
-        <section class="container mt-3">
-          <section class="container mt-3 text-overlay-2 w-75">
-            <div class="d-flex flex-row justify-content-between">
-              <li>stays</li>
-              <li>flight</li>
-              <li>flight+hotel</li>
-              <li>car rental</li>
-              <li>attractions</li>
-              <li>airport taxis</li>
+        <section class="container mt-3" >
+          <section class="container mt-3 text-overlay-2 w-75 infoSection">
+            <div class="row">
+              <li class="col-6 col-lg-2">flight+hotel</li>
+              <li class="col-6 col-lg-2">stays</li>
+              <li class="col-6 col-lg-2">flight</li>
+              <li class="col-6 col-lg-2">car rental</li>
+              <li class="col-6 col-lg-2">attractions</li>
+              <li class="col-6 col-lg-2">airport taxis</li>
             </div>
           </section>
           <p class="text-overlay">Find the best places to visit nearby.<br><span class="text-overlay-span">We deliver you the most affordable places according to your budget and the hotels which doesn't get heavy to your pocket.</span></p>
@@ -195,25 +185,25 @@
   <div class="container text-center">
     <div class="row">
       <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage8">
-        <span style="position: absolute; color:white; font-size:2rem; margin-left: 1rem;">New Delhi</span>
+        <span class="city-overlay-text">New Delhi</span>
        <img  style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" src="../image/NewDelhi_hotel.jpg" class="img-fluid" width="80%" alt="...">
         </div>
       <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage9">
-        <span style="position: absolute; color:white; font-size:2rem; margin-left: 1rem;">Jaipur</span>
+        <span class="city-overlay-text">Jaipur</span>
         <img  style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" src="../image/Jaipur_hotel.jpg" class="img-fluid" width="80%" alt="...">
       </div>
     </div>
     <div class="row mt-3">
       <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage10">
-        <span style="position: absolute; color:white; font-size:2rem; margin: 0 0 0 1rem;">Mumbai</span>
+        <span class="city-overlay-text">Mumbai</span>
         <img style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" style="padding-top: 25px;" src="../image/mumbai_hotel.jpg" class="img-fluid" width="100%" alt="...">
       </div>
       <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage11">
-        <span style="position: absolute; color:white; font-size:2rem; margin: 0 0 0 1rem;">Bangalore</span>
+        <span class="city-overlay-text">Bangalore</span>
         <img style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" style="padding-top: 25px;" src="../image/banglore_hotel.jpg" class="img-fluid" width="100%" alt="...">
       </div>
       <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage12">
-        <span style="position: absolute; color:white; font-size:2rem; margin: 0 0 0 1rem;">Dubai</span>
+        <span class="city-overlay-text">Dubai</span>
         <img style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" style="padding-top: 25px;" src="../image/Dubai_hotel.jpg" class="img-fluid" width="100%" alt="...">
       </div>
     </div>

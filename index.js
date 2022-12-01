@@ -92,9 +92,7 @@ if (window.location.href === `${appUrl}/place%20near%20me.html`) {
                               dat.image
                             } class="card-img-top img-fluid rounded" alt=${key}>
                             <div class="card-body ">
-                              <h5 class="card-title">${dat.city[0].toUpperCase()}${dat.city.slice(
-            1
-          )}</h5>
+                              <h5 class="card-title">${dat.city[0].toUpperCase()}${dat.city.slice(1)}</h5>
                               <p class="card-text">Average Spent Rs. ${
                                 dat.price
                               }</p>
