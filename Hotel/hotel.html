@@ -81,9 +81,10 @@
                       Place
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="./place near me.html">Near me</a></li>
-                      <li><a class="dropdown-item" href="#">Country</a></li>
-  
+                      <li><a class="dropdown-item" href="../place near me.html">Near me</a></li>
+                      <li><button type="button" class="btn dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Country
+                      </button></li>
                     </ul>
                   </li>
   
@@ -306,6 +307,37 @@
   </div>
 </footer>
 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="width: max-content;">
+    <div class="modal-content m-auto" style="width: max-content;">
+      <div class="modal-body bg-primary">
+        <div class="row">
+          <div class="text-white d-none d-md-block col-md-6">
+            <div class="d-flex p-0 p-md-5">
+              <h2>Find country to visit <br>according to your....</h2>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
+            <div class="d-flex flex-column bg-light rounded p-3">
+              <div class="mb-3">
+                <label for="countryName" class="form-label">Country</label>
+                <input type="text" list="suggestionListCountry" class="form-control" id="countryName" placeholder="Enter the country you want to search for...">
+                <datalist style="width: 500px;" id="suggestionListCountry">
+                  
+                </datalist>
+              </div>
+              <button type="submit" onclick="findPlaces()" class="btn btn-primary">
+                <span>Find</span>
+                <!-- <img src="https://icons8.com/icon/59878/search" alt="findLogo"> -->
+                <!-- <img src="./image/search.png"> -->
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
           <script>
@@ -337,6 +369,7 @@
     </script>
 
     <script src="./hotel.js"></script>
+    <script src="../index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"

@@ -244,3 +244,7 @@
     font-size: 0.8rem;
   }
 }
+
+.transparent-grey {
+  background-color:rgb(139, 213, 216) !important;
+}
