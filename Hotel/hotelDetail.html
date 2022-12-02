@@ -66,39 +66,33 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 ">
-                            <h1 class="fst-italic text-light">Krimo</h1>
+                            <h1 class="fst-italic text-white">Krimo</h1>
                         </div>
 
 
 
                         <div class="col-md-6 ">
                             <ul class="nav justify-content-center mt-2">
+
+                                <a class="nav-link text-white" href="/Hotel/hotel.html" role="button">
+                                    Hotel
+                                </a>
+
+
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-light" href="#" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Hotel
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Near me</a></li>
-                                        <li><a class="dropdown-item" href="#">Country</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                                    <a class="nav-link dropdown-toggle text-white" href="#" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         Place
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="./place near me.html">Near me</a></li>
-                                        <li><a class="dropdown-item" href="#">Country</a></li>
-
+                                        <li><a class="dropdown-item" href="../place near me.html">Near me</a></li>
+                                        <li><button type="button" class="btn dropdown-item" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal">
+                                                Country
+                                            </button></li>
                                     </ul>
                                 </li>
-
-
-
-
-                                <nav class="navbar">
+                                <nav class="navbar bg-light">
                                     <form class="container-fluid">
                                         <div class="input-group">
                                             <span class="input-group-text" id="basic-addon1"><img
@@ -110,8 +104,8 @@
                                 </nav>
 
                                 <!-- <li class="nav-item">
-                                    <a class="nav-link"><img src="<?= base_url('public/images/rss.gif') ?>" class=" img-fluid" alt="..."></a>
-                                </li> -->
+                                          <a class="nav-link"><img src="<?= base_url('public/images/rss.gif') ?>" class=" img-fluid" alt="..."></a>
+                                      </li> -->
                             </ul>
                         </div>
                     </div>
@@ -119,30 +113,27 @@
             </header>
             <section class="container mt-6">
                 <section class="container mt-3 text-overlay-2 w-75">
-                    <div class="d-flex flex-row justify-content-between" style="color: black ">
-                        <li>stays</li>
-                        <li>flight</li>
-                        <li>flight+hotel</li>
-                        <li>car rental</li>
-                        <li>attractions</li>
-                        <li>airport taxis</li>
+                    <div class="row" style="color: black ">
+                        <li class="col-6 col-sm-4 col-lg-2">stays</li>
+                        <li class="col-6 col-sm-4 col-lg-2">flight</li>
+                        <li class="col-6 col-sm-4 col-lg-2">flight+hotel</li>
+                        <li class="col-6 col-sm-4 col-lg-2">car rental</li>
+                        <li class="col-6 col-sm-4 col-lg-2">attractions</li>
+                        <li class="col-6 col-sm-4 col-lg-2">airport taxis</li>
                     </div>
                 </section>
 
             </section>
         </div>
-
-
-
-        <section class="container mt-4 p-3 " id="about">
-            <div class="row mt-6" style="padding-top: 5%;">
-                <h3 class="text-center mt-2" id="cityName">placeName</h3>
-            </div>
-            <span id="populateHotelsHere" class="d-flex flex-column justify-content-center">
-            
-            </span>
-        </section>
     </div>
+    <section class="container mt-4 p-3 " id="about">
+        <div class="row mt-6" style="padding-top: 3.5rem;">
+            <h3 class="text-center mt-2" id="cityName">placeName</h3>
+        </div>
+        <span id="populateHotelsHere" class="d-flex flex-column justify-content-center">
+
+        </span>
+    </section>
     </section>
     <!-- <section class="container mt-4 p-3 " id="about">
   <div class="row">
@@ -282,6 +273,40 @@
     </footer>
 
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: max-content;">
+            <div class="modal-content m-auto" style="width: max-content;">
+                <div class="modal-body bg-primary">
+                    <div class="row">
+                        <div class="text-white d-none d-md-block col-md-6">
+                            <div class="d-flex p-0 p-md-5">
+                                <h2>Find country to visit <br>according to your....</h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
+                            <div class="d-flex flex-column bg-light rounded p-3">
+                                <div class="mb-3">
+                                    <label for="countryName" class="form-label">Country</label>
+                                    <input type="text" list="suggestionListCountry" class="form-control"
+                                        id="countryName" placeholder="Enter the country you want to search for...">
+                                    <datalist style="width: 500px;" id="suggestionListCountry">
+
+                                    </datalist>
+                                </div>
+                                <button type="submit" onclick="findPlaces()" class="btn btn-primary">
+                                    <span>Find</span>
+                                    <!-- <img src="https://icons8.com/icon/59878/search" alt="findLogo"> -->
+                                    <!-- <img src="./image/search.png"> -->
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../index.js"></script>
 
     <script>
         $('.navbar-collapse a').click(function () {
