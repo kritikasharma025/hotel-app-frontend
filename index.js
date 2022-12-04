@@ -150,48 +150,55 @@ const findPlaces = () => {
 
 let countryName = document.querySelector("#countryNameHead");
 
-window.onload = async function () {
-  countryName.innerHTML = `EXPLORE ${sessionStorage
-    .getItem("country")
-    .toUpperCase()}`;
+if (sessionStorage.getItem("country") && (window.location.href !== `${appUrl}/index.html` || window.location.href !== `${appUrl}/`)) {
+  window.onload = async function () {
+    try {
+      countryName.innerHTML = `EXPLORE ${sessionStorage
+        .getItem("country")
+        .toUpperCase()}`;
 
-  displayLoader("populateHereSuggestions");
+      displayLoader("populateHereSuggestions");
 
-  let countryPlaces = await fetch(
-    `${serverUrl}/place/getCountry`,
-    {
-      body: JSON.stringify({ country: sessionStorage.getItem("country") }),
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    }
-  );
+      let countryPlaces = await fetch(
+        `${serverUrl}/place/getCountry`,
+        {
+          body: JSON.stringify({ country: sessionStorage.getItem("country") }),
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        }
+      );
 
-  let data = await countryPlaces.json();
+      let data = await countryPlaces.json();
 
-  hideLoader("populateHereSuggestions");
-  document.getElementById("populateHereSuggestions").innerHTML = "";
-  if (data.message.length > 0) {
-    data.message.map((dat, key) => {
-      document.getElementById("populateHereSuggestions").innerHTML =
-        document.getElementById("populateHereSuggestions").innerHTML +
-        `
+      hideLoader("populateHereSuggestions");
+      document.getElementById("populateHereSuggestions").innerHTML = "";
+      if (data.message.length > 0) {
+        data.message.map((dat, key) => {
+          document.getElementById("populateHereSuggestions").innerHTML =
+            document.getElementById("populateHereSuggestions").innerHTML +
+            `
                           <div class="col-12 col-md-4 col-lg-3 my-2">
                              <div class="card" style="width: 20rem;">
                                 <img src=${dat.image
-        } class="card-img-top img-fluid rounded" alt=${key}>
+            } class="card-img-top img-fluid rounded" alt=${key}>
                                 <div class="card-body ">
                                   <h5 class="card-title">${dat.city[0].toUpperCase()}${dat.city.slice(
-          1
-        )}</h5>
+              1
+            )}</h5>
                                   <h6>Average Spent Rs. ${dat.price}</h6>
                                  <a href="./page7.html" class="btn btn-primary btn-sm rounded fs-6 w-50 ">Go somewhere</a>
                                 </div>
                               </div>
                         </div>
             `;
-    });
-  }
-};
+        });
+      }
+    }
+    catch (err) {
+      console.log(err.message)
+    }
+  };
+}
