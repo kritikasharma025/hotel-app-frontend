@@ -45,10 +45,26 @@
                 </li>
 
               </ul>
-              <form class="d-flex">
-                <input class="form-control me-2 shadow-none border-0" type="search" placeholder="Search"
-                  aria-label="Search">
-                <button class="btn btn-outline-success  shadow-none me-1" type="submit">Search</button>
+              <form class="d-block d-md-flex justify-content-end">
+                <!-- <input class="form-control me-2 shadow-none border-0" type="search" placeholder="Search"
+                  aria-label="Search"> -->
+                <!-- <button class="btn btn-outline-success  shadow-none me-1" type="submit">
+                  Kritika
+
+                </button> -->
+                <img src="./image/1.jpg" class="d-none d-md-block" width="40px" style="border-radius: 50%;" alt="user_image">
+                <div class="btn-group d-block d-md-flex mx-0 mx-md-3">
+                  <button type="button" class="btn btn-primary dropdown-toggle w-100 btn-loader" id="userName" data-bs-toggle="dropdown" aria-expanded="false">
+                    
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" role="button" onclick="logout()">Logout</a></li>
+                    <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li> -->
+                  </ul>
+                </div>
               </form>
             </div>
           </div>

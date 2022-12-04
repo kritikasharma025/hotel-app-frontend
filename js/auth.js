@@ -1,12 +1,26 @@
-var appUrl = "https://kritikasharma025.github.io/hotel-app-frontend"
-// var appUrl = "http://localhost:5500";
-// var serverUrl = "http://localhost:8080/api"
-var serverUrl = "https://hotel-app-backend.onrender.com/api"
+// var appUrl = "https://kritikasharma025.github.io/hotel-app-frontend"
+var appUrl = "http://localhost:5500";
+var serverUrl = "http://localhost:8080/api"
+// var serverUrl = "https://hotel-app-backend.onrender.com/api"
 
 const showButtonLoader = () => {
     document.getElementsByClassName("btn-loader")[0].innerHTML = `<div class="spinner-border text-light" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>`;
+}
+
+const verifyAuth = async (token) => {
+    let data = await fetch(`${serverUrl}/auth/verifyToken`,{
+        headers:{
+            "Content-Type":"application/json",
+            "Accept":"application/json",
+            "Authorization":`Bearer ${token}`
+        },
+        method:"POST"
+    })
+
+    data = await data.json();
+    sessionStorage.setItem('userData', JSON.stringify(data))
 }
 
 const hideButtonLoader = (str) => {
@@ -15,10 +29,14 @@ const hideButtonLoader = (str) => {
 
 window.onload = async function (){
     if(localStorage.getItem('jwToken')){
+        await verifyAuth(localStorage.getItem('jwToken'))
         if(window.location.href === `${appUrl}/login.html` || window.location.href === `${appUrl}/register.html`){
             return window.location.href = `${appUrl}/index.html`;
+            document.getElementById("userName").innerText=JSON.parse(sessionStorage.getItem("userData")).name
         }else{
+            document.getElementById("userName").innerText=JSON.parse(sessionStorage.getItem("userData")).name
             return;
+            
         }
     }else{
         if(window.location.href===`${appUrl}/register.html`){
@@ -100,4 +118,12 @@ const login = async () => {
             window.location.reload()
         }
     }
+}
+
+const logout = async () => {
+    showButtonLoader()
+    localStorage.clear();
+    sessionStorage.clear();
+    window.location.reload()
+    hideButtonLoader(" ")
 }

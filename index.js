@@ -1,7 +1,7 @@
-var appUrl = "https://kritikasharma025.github.io/hotel-app-frontend"
-// var appUrl = "http://localhost:5500";
-// var serverUrl = "http://localhost:8080/api"
-var serverUrl = "https://hotel-app-backend.onrender.com/api"
+// var appUrl = "https://kritikasharma025.github.io/hotel-app-frontend"
+var appUrl = "http://localhost:5500";
+var serverUrl = "http://localhost:8080/api"
+// var serverUrl = "https://hotel-app-backend.onrender.com/api"
 const rangeSlider = document.getElementById("customRange1");
 const rangeSlider2 = document.getElementById("customRange2");
 let endPrice;
