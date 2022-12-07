@@ -1,7 +1,7 @@
-var appUrl = "https://kritikasharma025.github.io/hotel-app-frontend"
-// var appUrl = "http://localhost:5500";
-// var serverUrl = "http://localhost:8080/api"
-var serverUrl = "https://hotel-app-backend.onrender.com/api"
+// var appUrl = "https://kritikasharma025.github.io/hotel-app-frontend"
+var appUrl = "http://localhost:5500";
+var serverUrl = "http://localhost:8080/api"
+// var serverUrl = "https://hotel-app-backend.onrender.com/api"
 
 const showButtonLoader = () => {
     document.getElementsByClassName("btn-loader")[0].innerHTML = `<div class="spinner-border text-light" role="status">
