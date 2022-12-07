@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>owl</title>
     <link href="css/style.css" rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <div class="container-fluid main ">
         <header class="container">
             <div class="row ">
                 <nav class="navbar navbar-expand-lg navbar-light shadow-lg p-3 mb-4 rounded mt-2">
                     <div class="container-fluid">
-                        <button class="navbar-toggler button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -48,94 +47,143 @@
                                     <a class="nav-link  active" href="./contact.html">Contact</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link  active" href="#Filter">Filter</a>
-                              </li>
-                               
+                                    <a class="nav-link  active" href="#Filter">Filter</a>
+                                </li>
+
                             </ul>
-                            <form class="d-flex">
-                                <input class="form-control me-2 shadow-none border-0" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success  shadow-none me-1" type="submit">Search</button>
+                            <form class="d-block d-md-flex justify-content-end">
+                                <!-- <input class="form-control me-2 shadow-none border-0" type="search" placeholder="Search"
+                              aria-label="Search"> -->
+                                <!-- <button class="btn btn-outline-success  shadow-none me-1" type="submit">
+                              Kritika
+            
+                            </button> -->
+                                <img src="" class="d-none d-md-block" width="40px"
+                                    style="border-radius: 50%; cursor: pointer;" id="upload_widget" alt="user_image">
+                                <div class="btn-group d-block d-md-flex mx-0 mx-md-3">
+                                    <button type="button" class="btn btn-primary dropdown-toggle w-100 btn-loader"
+                                        id="userName" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" role="button" onclick="logout()">Logout</a></li>
+                                        <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Separated link</a></li> -->
+                                    </ul>
+                                </div>
                             </form>
                         </div>
                     </div>
                 </nav>
             </div>
             <div class="container">
-              <div class="row">
-                  <div class="col-md-6 ">
-                      <h1 class="fst-italic">Krimo</h1>
-                  </div>
-              </div>
-          </div>
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <h1 class="fst-italic">Krimo</h1>
+                    </div>
+                </div>
+            </div>
 
         </header>
         <section class="container mt-3 p-2">
             <h4 class="text-center">Places To Visit In Jaipur</h4>
-            <p>-Amber / Amer Fort Jaipur, Jaigarh Fort Jaipur, Nahargarh Fort Jaipur, Jantar Mantar Jaipur, City Palace Jaipur, Hawa Mahal Jaipur, Laxmi Narayan Temple / Birla Mandir Jaipur, Moti Doongri Ganesh Temple Jaipur, Govind Dev Ji Temple Jaipur, Ram Niwas Garden Jaipur, Chokhi Dhani Jaipur, Vidyadhar Garden Jaipur, Sisodia Rani ka Bagh Jaipur, Albert Hall Museum Jaipur, Galtaji Temple Jaipur, Jal Mahal Jaipur, Swargasuli Tower Jaipur, B M Birla Auditorium Jaipur, Jawahar Kala Kendra Jaipur, Central Park Jaipur, Chand Baori / Abhaneri Step Well Jaipur, Diwan-e-Am Jaipur, Anokhi Museum of Hand Printing Jaipur, Jaipur Zoo, Elefun Jaipur, Shila Devi Temple Jaipur, Khole Ke Hanuman Ji Temple Jaipur, Maharaja Sawai Man Singh II Museum Jaipur, Surya Mandir Jaipur, Jain Mandir Sanganer Jaipur, Diwan e Khas Hall of Private Audience Jaipur, Ganesh Pol Gateway Jaipur, The Statue Circle Jaipur, Mayo College Museum Jaipur, Ridhi Sidhi Pol Jaipur, Chandra Mahal Jaipur, Gatore Ki Chhatriyan Jaipur, Chand Pol (Moon Gate) Jaipur, Panna Meena ka Kund Jaipur, Rusirani Village Jaipur, Alice Garg National Seashells Museum Jaipur, Sheesh Mahal Jaipur, Gallery Artchill Jaipur, Johari Bazaar Jaipur, Bapu Bazar Jaipur, Tripolia Bazar Jaipur</p>
-            <div class="row mt-3" style="color:rgb(159, 84, 5) ;"> 
-                <div class="col-md-3 text-center"><img src="./image/AmberFort.jpg" class="card-img-top img-fluid rounded" alt="...">Amber Fort</div>
-                <div class="col-md-3 text-center"><img src="./image/JaigarhFort.jpg" class="card-img-top img-fluid rounded" alt="...">Jaigarh fort</div>
-                <div class="col-md-3 text-center"><img src="./image/NahargarhFort.jpg" class="card-img-top img-fluid rounded" alt="...">Nahargarh fort</div>
-                <div class="col-md-3 text-center"><img src="./image/JantarMantar.jpg" class="card-img-top img-fluid rounded" alt="...">Jantar mantar</div>
-            </div>  
-            <div class="row mt-3" style="color:rgb(159, 84, 5) ;"> 
-                <div class="col-md-3 text-center"><img src="./image/CityPalace.jpg" class="card-img-top img-fluid rounded" alt="...">City Palace</div>
-                <div class="col-md-3 text-center"><img src="./image/hawamahal.jpg" class="card-img-top img-fluid rounded" alt="...">Hawa Mahal</div>
-                <div class="col-md-3 text-center"><img src="./image/Birla Mandir.jpg" class="card-img-top img-fluid rounded" alt="...">Birla Mandir</div>
-                <div class="col-md-3 text-center"><img src="./image/MotiDoongriGaneshTemple.jpg" class="card-img-top img-fluid rounded" alt="...">Moti Doongri Ganesh Temple</div>
-            </div>  
-            <div class="row mt-3" style="color:rgb(159, 84, 5) ;"> 
-                <div class="col-md-3 text-center"><img src="./image/GovindDevJiTemple.jpg" class="card-img-top img-fluid rounded" alt="...">Govind Dev Ji Temple</div>
-                <div class="col-md-3 text-center"><img src="./image/RamNiwasGarden.jpg" class="card-img-top img-fluid rounded" alt="...">Ram Niwas Garden</div>
-                <div class="col-md-3 text-center"><img src="./image/ChokhiDhani.jpg" class="card-img-top img-fluid rounded" alt="...">Chokhi Dhani</div>
-                <div class="col-md-3 text-center"><img src="./image/VidyadharGarden.jpg" class="card-img-top img-fluid rounded" alt="...">Vidyadhar Garden</div>
-            </div>  
+            <p>-Amber / Amer Fort Jaipur, Jaigarh Fort Jaipur, Nahargarh Fort Jaipur, Jantar Mantar Jaipur, City Palace
+                Jaipur, Hawa Mahal Jaipur, Laxmi Narayan Temple / Birla Mandir Jaipur, Moti Doongri Ganesh Temple
+                Jaipur, Govind Dev Ji Temple Jaipur, Ram Niwas Garden Jaipur, Chokhi Dhani Jaipur, Vidyadhar Garden
+                Jaipur, Sisodia Rani ka Bagh Jaipur, Albert Hall Museum Jaipur, Galtaji Temple Jaipur, Jal Mahal Jaipur,
+                Swargasuli Tower Jaipur, B M Birla Auditorium Jaipur, Jawahar Kala Kendra Jaipur, Central Park Jaipur,
+                Chand Baori / Abhaneri Step Well Jaipur, Diwan-e-Am Jaipur, Anokhi Museum of Hand Printing Jaipur,
+                Jaipur Zoo, Elefun Jaipur, Shila Devi Temple Jaipur, Khole Ke Hanuman Ji Temple Jaipur, Maharaja Sawai
+                Man Singh II Museum Jaipur, Surya Mandir Jaipur, Jain Mandir Sanganer Jaipur, Diwan e Khas Hall of
+                Private Audience Jaipur, Ganesh Pol Gateway Jaipur, The Statue Circle Jaipur, Mayo College Museum
+                Jaipur, Ridhi Sidhi Pol Jaipur, Chandra Mahal Jaipur, Gatore Ki Chhatriyan Jaipur, Chand Pol (Moon Gate)
+                Jaipur, Panna Meena ka Kund Jaipur, Rusirani Village Jaipur, Alice Garg National Seashells Museum
+                Jaipur, Sheesh Mahal Jaipur, Gallery Artchill Jaipur, Johari Bazaar Jaipur, Bapu Bazar Jaipur, Tripolia
+                Bazar Jaipur</p>
+            <div class="row mt-3" style="color:rgb(159, 84, 5) ;">
+                <div class="col-md-3 text-center"><img src="./image/AmberFort.jpg"
+                        class="card-img-top img-fluid rounded" alt="...">Amber Fort</div>
+                <div class="col-md-3 text-center"><img src="./image/JaigarhFort.jpg"
+                        class="card-img-top img-fluid rounded" alt="...">Jaigarh fort</div>
+                <div class="col-md-3 text-center"><img src="./image/NahargarhFort.jpg"
+                        class="card-img-top img-fluid rounded" alt="...">Nahargarh fort</div>
+                <div class="col-md-3 text-center"><img src="./image/JantarMantar.jpg"
+                        class="card-img-top img-fluid rounded" alt="...">Jantar mantar</div>
+            </div>
+            <div class="row mt-3" style="color:rgb(159, 84, 5) ;">
+                <div class="col-md-3 text-center"><img src="./image/CityPalace.jpg"
+                        class="card-img-top img-fluid rounded" alt="...">City Palace</div>
+                <div class="col-md-3 text-center"><img src="./image/hawamahal.jpg"
+                        class="card-img-top img-fluid rounded" alt="...">Hawa Mahal</div>
+                <div class="col-md-3 text-center"><img src="./image/Birla Mandir.jpg"
+                        class="card-img-top img-fluid rounded" alt="...">Birla Mandir</div>
+                <div class="col-md-3 text-center"><img src="./image/MotiDoongriGaneshTemple.jpg"
+                        class="card-img-top img-fluid rounded" alt="...">Moti Doongri Ganesh Temple</div>
+            </div>
+            <div class="row mt-3" style="color:rgb(159, 84, 5) ;">
+                <div class="col-md-3 text-center"><img src="./image/GovindDevJiTemple.jpg"
+                        class="card-img-top img-fluid rounded" alt="...">Govind Dev Ji Temple</div>
+                <div class="col-md-3 text-center"><img src="./image/RamNiwasGarden.jpg"
+                        class="card-img-top img-fluid rounded" alt="...">Ram Niwas Garden</div>
+                <div class="col-md-3 text-center"><img src="./image/ChokhiDhani.jpg"
+                        class="card-img-top img-fluid rounded" alt="...">Chokhi Dhani</div>
+                <div class="col-md-3 text-center"><img src="./image/VidyadharGarden.jpg"
+                        class="card-img-top img-fluid rounded" alt="...">Vidyadhar Garden</div>
+            </div>
         </section>
         <footer class="container mt-3 p-4 ">
             <hr class="mt-5" id="footer-hr">
-              <div class="row ">
+            <div class="row ">
                 <div class="col-md-6 m-auto">
-                  <p id="footer-p"> © 2022 KRIMO Portfolio. All Rights Reserved | Design by <span class="text-black fst-italic">Kritika Sharma</span>
-                     & <span class="text-dark fst-italic">Monika Jangid</p>
-                </div>  
-              </div>
-            </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-       $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    dots:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
-<script>
-      $('.navbar-collapse a').click(function(){
-          $(".navbar-collapse").collapse('hide');
-      });
-  </script>
+                    <p id="footer-p"> © 2022 KRIMO Portfolio. All Rights Reserved | Design by <span
+                            class="text-black fst-italic">Kritika Sharma</span>
+                        & <span class="text-dark fst-italic">Monika Jangid</p>
+                </div>
+            </div>
+        </footer>
+        <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+        <script src="./js/profileUpdate.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            })
+                < script >
+                $('.navbar-collapse a').click(function () {
+                    $(".navbar-collapse").collapse('hide');
+                });
+        </script>
 
 
-    
-   
-        
-    </script>
-    <script src="./js/auth.js"></script>
+
+
+
+        </script>
+        <script src="./js/auth.js"></script>
 </body>
+
 </html>

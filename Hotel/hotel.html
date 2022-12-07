@@ -1,253 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Krimo</title>
-    <link href="../css/style.css" rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="../js/auth.js"></script>
-  </head>
-  <body>
 
-    <div class="container-fluid main ">
-      
-      <div class="bg-purple">
-        <header class="container-fluid">
-          <div class="row ">
-            <nav class="navbar navbar-expand-lg shadow-lg p-3 mb-4 rounded-bottom" style="background-color: #e6e4ec;">
-              <div class="container-fluid">
-                <button class="navbar-toggler button" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                  aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0 main-ul">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link  active" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link  active" href="#service">Service</a>
-                    </li>
-                    <li class="nav-item ">
-                      <a class="nav-link  active" href="./contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link  active" href="#Filter">Filter</a>
-                    </li>
-  
-                  </ul>
-                  <form class="d-flex">
-                    <input class="form-control me-2 shadow-none border-1" type="search" placeholder="Search"
-                      aria-label="Search">
-                    <button class="btn btn-success  shadow-none me-1" type="submit">Search</button>
-                  </form>
-                </div>
-              </div>
-            </nav>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 ">
-                <h1 class="fst-italic text-light">Krimo</h1>
-              </div>
-  
-  
-  
-              <div class="col-md-6 ">
-                <ul class="nav justify-content-center mt-2">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      Place
-                    </a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Krimo</title>
+  <link href="../css/style.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="../js/auth.js"></script>
+</head>
+
+<body>
+
+  <div class="container-fluid main ">
+
+    <div class="bg-purple">
+      <header class="container-fluid">
+        <div class="row ">
+          <nav class="navbar navbar-expand-lg text-light navbar-light shadow-lg p-3 mb-4 rounded mt-2"
+            style="background-color: white;">
+            <div class="container-fluid">
+              <button class="navbar-toggler button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 main-ul">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  active" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  active" href="#service">Service</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link  active" href="./contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  active" href="#Filter">Filter</a>
+                  </li>
+
+                </ul>
+                <form class="d-block d-md-flex justify-content-end">
+                  <!-- <input class="form-control me-2 shadow-none border-0" type="search" placeholder="Search"
+                              aria-label="Search"> -->
+                  <!-- <button class="btn btn-outline-success  shadow-none me-1" type="submit">
+                              Kritika
+            
+                            </button> -->
+                  <img src="" class="d-none d-md-block" width="40px" style="border-radius: 50%; cursor: pointer;"
+                    id="upload_widget" alt="user_image">
+                  <div class="btn-group d-block d-md-flex mx-0 mx-md-3">
+                    <button type="button" class="btn btn-primary dropdown-toggle w-100 btn-loader" id="userName"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+
+                    </button>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="../place near me.html">Near me</a></li>
-                      <li><button type="button" class="btn dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <li><a class="dropdown-item" role="button" onclick="logout()">Logout</a></li>
+                      <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Separated link</a></li> -->
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 ">
+              <h1 class="fst-italic text-light">Krimo</h1>
+            </div>
+
+
+
+            <div class="col-md-6 ">
+              <ul class="nav justify-content-center mt-2">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Place
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../place near me.html">Near me</a></li>
+                    <li><button type="button" class="btn dropdown-item" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
                         Country
                       </button></li>
-                    </ul>
-                  </li>
-  
-  
-  
-  
-                  <nav class="navbar">
-                    <form class="container-fluid">
-                      <div class="input-group">
-                        <span class="input-group-text" id="basic-addon1"><img src="../image/search.png"></span>
-                        <input type="text" class="form-control shadow-none" placeholder="Username" aria-label="Username"
-                          aria-describedby="basic-addon1">
-                      </div>
-                    </form>
-                  </nav>
-  
-                  <!-- <li class="nav-item">
+                  </ul>
+                </li>
+
+
+
+
+                <nav class="navbar">
+                  <form class="container-fluid">
+                    <div class="input-group">
+                      <span class="input-group-text" id="basic-addon1"><img src="../image/search.png"></span>
+                      <input type="text" class="form-control shadow-none" placeholder="Username" aria-label="Username"
+                        aria-describedby="basic-addon1">
+                    </div>
+                  </form>
+                </nav>
+
+                <!-- <li class="nav-item">
                                     <a class="nav-link"><img src="<?= base_url('public/images/rss.gif') ?>" class=" img-fluid" alt="..."></a>
                                 </li> -->
-                </ul>
-              </div>
+              </ul>
             </div>
           </div>
-        </header>
-        <section class="container mt-3" >
-          <section class="container mt-3 text-overlay-2 w-75 infoSection">
-            <div class="row">
-              <li class="col-6 col-lg-2">flight+hotel</li>
-              <li class="col-6 col-lg-2">stays</li>
-              <li class="col-6 col-lg-2">flight</li>
-              <li class="col-6 col-lg-2">car rental</li>
-              <li class="col-6 col-lg-2">attractions</li>
-              <li class="col-6 col-lg-2">airport taxis</li>
-            </div>
-          </section>
-          <p class="text-overlay">Find the best places to visit nearby.<br><span class="text-overlay-span">We deliver you the most affordable places according to your budget and the hotels which doesn't get heavy to your pocket.</span></p>
-          <video class="playVid" crossorigin="anonymous" src="https://res.cloudinary.com/dwxwscvsq/video/upload/v1668773526/hotekKritikaProject_jn7ofs.mp4" width="100%"  autoplay muted loop></video>
-        </section>
-      </div>
-
-<div class="container mt-4 p-2">
-  <div class="row mt-3">
-    <div class="col-md-6 m-auto text-center ">
-      <h2 class="fst-normal">Explore India</h2>
-      <h6 class="fst-normal text-opacity-50 text-danger mt-2"> These popular destinations have a lot to offere </h6>
-  </div>
-    <div class="col-md-12">
-          <div class="owl-carousel owl-theme mt-2">
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage1"><img src="../image/goa.jpg"><h5 class="text-center mt-2" id="h3-card">Goa</h5></div>
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage2"><img src="../image/mumbai.jpg"><h5 class="text-center mt-2" id="h3-card">Mumbai</h5></div>
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage3"><img src="../image/NewDelhi.jpg.crdownload"><h5 class="text-center mt-2" id="h3-card">New Delhi</h5></div>
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage4"><img src="../image/jaipur.jpg"><h5 class="text-center mt-2" id="h3-card">Jaipur</h5></div>
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage5"><img src="../image/banglore.jpg"><h5 class="text-center mt-2" id="h3-card">Banglore</h5></div>
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage6"><img src="../image/northgoa.jpg"><h5 class="text-center mt-2" id="h3-card">North Goa</h5></div> 
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage7"><img src="../image/udaipurrr.jpg"><h5 class="text-center mt-2" id="h3-card">Udaipur</h5></div>   
-          </div>
-      </div>
-  </div>
-</div>  
-
-
-<div class="container mt-4 p-2">
-  <div class="row mt-3">
-    <div class="col-md-6 m-auto text-center ">
-      <h2 class="fst-normal">Browse by property type</h2>
- </div>
-    <div class="col-md-12">
-          <div class="owl-carousel owl-theme mt-2">
-              <div class="item"><img src="../image/PaigahTombs.webp"><h5 class="text-center mt-2" id="h3-card">Hotel</h5></div>
-              <div class="item"><img src="../image/JalaviharWaterPark.jpg"><h5 class="text-center mt-2" id="h3-card">Apartments</h5></div>
-              <div class="item"><img src="../image/ShamirpetLake.jpg"><h5 class="text-center mt-2" id="h3-card">Resorts</h5></div>
-              <div class="item"><img src="../image/OsmanSagar.webp"><h5 class="text-center mt-2" id="h3-card">Villas</h5></div>
-              <div class="item"><img src="../image/SanjeevaiahPark.jpg"><h5 class="text-center mt-2" id="h3-card">Cabins</h5></div>
-              <div class="item"><img src="../image/Charminar.webp"><h5 class="text-center mt-2" id="h3-card">Cattages</h5></div>  
-              <div class="item"><img src="../image/Charminar.webp"><h5 class="text-center mt-2" id="h3-card">Galamping</h5></div>  
-          </div>
-      </div>
-  </div>
-</div>  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<img style="padding-left: 102px;" src="../image/Assam-Tea.jpg.crdownload" class="img-fluid" width="25%" alt="...">-->
-
-
-
-  <div class="container text-center">
-    <div class="row">
-      <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage8">
-        <span class="city-overlay-text">New Delhi</span>
-       <img  style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" src="../image/NewDelhi_hotel.jpg" class="img-fluid" width="80%" alt="...">
         </div>
-      <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage9">
-        <span class="city-overlay-text">Jaipur</span>
-        <img  style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" src="../image/Jaipur_hotel.jpg" class="img-fluid" width="80%" alt="...">
-      </div>
-    </div>
-    <div class="row mt-3">
-      <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage10">
-        <span class="city-overlay-text">Mumbai</span>
-        <img style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" style="padding-top: 25px;" src="../image/mumbai_hotel.jpg" class="img-fluid" width="100%" alt="...">
-      </div>
-      <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage11">
-        <span class="city-overlay-text">Bangalore</span>
-        <img style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" style="padding-top: 25px;" src="../image/banglore_hotel.jpg" class="img-fluid" width="100%" alt="...">
-      </div>
-      <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage12">
-        <span class="city-overlay-text">Dubai</span>
-        <img style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" style="padding-top: 25px;" src="../image/Dubai_hotel.jpg" class="img-fluid" width="100%" alt="...">
-      </div>
-    </div>
-  </div>
-
-
-
-
-
-
-
-
-
-
-<div class="container mt-4 p-2">
-  <div class="row mt-3">
-    <div class="col-md-6 m-auto text-center ">
-      <h2 class="fst-normal">Quick and easy trip planner</h2>
-      <h6 class="fst-normal text-opacity-50 text-danger mt-2">pick a vibe and explore the top destinations in India</h6>
-  </div>
-  <div class="d-flex flex-row" id="idkID" style="justify-content: start; min-width: 100%;">
-    <h6 class="mx-2">Beach</h6>
-    <h6 class="mx-2">City</h6>
-    <h6 class="mx-2">Outdoors</h6>
-    <h6 class="mx-2">Romance</h6>
-  </div>
- 
-    <div class="col-md-12">
-          <div class="owl-carousel owl-theme mt-2">
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage13"><img src="../image/daman.jpg"><h5 class="text-center mt-2" id="h3-card">Daman</h5></div>
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage14"><img src="../image/visakhapatnam.jpg"><h5 class="text-center mt-2" id="h3-card">Visakhapatnam</h5></div>
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage15"><img src="../image/ShamirpetLake.jpg"><h5 class="text-center mt-2" id="h3-card">Puri</h5></div>
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage16"><img src="../image/OsmanSagar.webp"><h5 class="text-center mt-2" id="h3-card">Malvan</h5></div>
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage17"><img src="../image/SanjeevaiahPark.jpg"><h5 class="text-center mt-2" id="h3-card">Arambol</h5></div>
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage18"><img src="../image/Charminar.webp"><h5 class="text-center mt-2" id="h3-card">Mandrem</h5></div>  
-              <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage19"><img src="../image/Charminar.webp"><h5 class="text-center mt-2" id="h3-card">Vagatar</h5></div>  
+      </header>
+      <section class="container mt-3">
+        <section class="container mt-3 text-overlay-2 w-75 infoSection">
+          <div class="row">
+            <li class="col-6 col-lg-2">flight+hotel</li>
+            <li class="col-6 col-lg-2">stays</li>
+            <li class="col-6 col-lg-2">flight</li>
+            <li class="col-6 col-lg-2">car rental</li>
+            <li class="col-6 col-lg-2">attractions</li>
+            <li class="col-6 col-lg-2">airport taxis</li>
           </div>
-      </div>
-  </div>
-</div>  
+        </section>
+        <p class="text-overlay">Find the best places to visit nearby.<br><span class="text-overlay-span">We deliver you
+            the most affordable places according to your budget and the hotels which doesn't get heavy to your
+            pocket.</span></p>
+        <video class="playVid" crossorigin="anonymous"
+          src="https://res.cloudinary.com/dwxwscvsq/video/upload/v1668773526/hotekKritikaProject_jn7ofs.mp4"
+          width="100%" autoplay muted loop></video>
+      </section>
+    </div>
 
-<!-- <section class="container mt-3">
+    <div class="container mt-4 p-2">
+      <div class="row mt-3">
+        <div class="col-md-6 m-auto text-center ">
+          <h2 class="fst-normal">Explore India</h2>
+          <h6 class="fst-normal text-opacity-50 text-danger mt-2"> These popular destinations have a lot to offere </h6>
+        </div>
+        <div class="col-md-12">
+          <div class="owl-carousel owl-theme mt-2">
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage1"><img src="../image/goa.jpg">
+              <h5 class="text-center mt-2" id="h3-card">Goa</h5>
+            </div>
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage2"><img src="../image/mumbai.jpg">
+              <h5 class="text-center mt-2" id="h3-card">Mumbai</h5>
+            </div>
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage3"><img
+                src="../image/NewDelhi.jpg.crdownload">
+              <h5 class="text-center mt-2" id="h3-card">New Delhi</h5>
+            </div>
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage4"><img src="../image/jaipur.jpg">
+              <h5 class="text-center mt-2" id="h3-card">Jaipur</h5>
+            </div>
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage5"><img src="../image/banglore.jpg">
+              <h5 class="text-center mt-2" id="h3-card">Banglore</h5>
+            </div>
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage6"><img src="../image/northgoa.jpg">
+              <h5 class="text-center mt-2" id="h3-card">North Goa</h5>
+            </div>
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage7"><img src="../image/udaipurrr.jpg">
+              <h5 class="text-center mt-2" id="h3-card">Udaipur</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container mt-4 p-2">
+      <div class="row mt-3">
+        <div class="col-md-6 m-auto text-center ">
+          <h2 class="fst-normal">Browse by property type</h2>
+        </div>
+        <div class="col-md-12">
+          <div class="owl-carousel owl-theme mt-2">
+            <div class="item"><img src="../image/PaigahTombs.webp">
+              <h5 class="text-center mt-2" id="h3-card">Hotel</h5>
+            </div>
+            <div class="item"><img src="../image/JalaviharWaterPark.jpg">
+              <h5 class="text-center mt-2" id="h3-card">Apartments</h5>
+            </div>
+            <div class="item"><img src="../image/ShamirpetLake.jpg">
+              <h5 class="text-center mt-2" id="h3-card">Resorts</h5>
+            </div>
+            <div class="item"><img src="../image/OsmanSagar.webp">
+              <h5 class="text-center mt-2" id="h3-card">Villas</h5>
+            </div>
+            <div class="item"><img src="../image/SanjeevaiahPark.jpg">
+              <h5 class="text-center mt-2" id="h3-card">Cabins</h5>
+            </div>
+            <div class="item"><img src="../image/Charminar.webp">
+              <h5 class="text-center mt-2" id="h3-card">Cattages</h5>
+            </div>
+            <div class="item"><img src="../image/Charminar.webp">
+              <h5 class="text-center mt-2" id="h3-card">Galamping</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<img style="padding-left: 102px;" src="../image/Assam-Tea.jpg.crdownload" class="img-fluid" width="25%" alt="...">-->
+
+
+
+    <div class="container text-center">
+      <div class="row">
+        <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage8">
+          <span class="city-overlay-text">New Delhi</span>
+          <img style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" src="../image/NewDelhi_hotel.jpg" class="img-fluid"
+            width="80%" alt="...">
+        </div>
+        <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage9">
+          <span class="city-overlay-text">Jaipur</span>
+          <img style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" src="../image/Jaipur_hotel.jpg" class="img-fluid"
+            width="80%" alt="...">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage10">
+          <span class="city-overlay-text">Mumbai</span>
+          <img style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" style="padding-top: 25px;"
+            src="../image/mumbai_hotel.jpg" class="img-fluid" width="100%" alt="...">
+        </div>
+        <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage11">
+          <span class="city-overlay-text">Bangalore</span>
+          <img style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" style="padding-top: 25px;"
+            src="../image/banglore_hotel.jpg" class="img-fluid" width="100%" alt="...">
+        </div>
+        <div class="col" onclick="onClickHotelImage(this.id)" id="goToHotelPage12">
+          <span class="city-overlay-text">Dubai</span>
+          <img style="box-shadow: 7px 7px 20px rgb(124, 123, 123);" style="padding-top: 25px;"
+            src="../image/Dubai_hotel.jpg" class="img-fluid" width="100%" alt="...">
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="container mt-4 p-2">
+      <div class="row mt-3">
+        <div class="col-md-6 m-auto text-center ">
+          <h2 class="fst-normal">Quick and easy trip planner</h2>
+          <h6 class="fst-normal text-opacity-50 text-danger mt-2">pick a vibe and explore the top destinations in India
+          </h6>
+        </div>
+        <div class="d-flex flex-row" id="idkID" style="justify-content: start; min-width: 100%;">
+          <h6 class="mx-2">Beach</h6>
+          <h6 class="mx-2">City</h6>
+          <h6 class="mx-2">Outdoors</h6>
+          <h6 class="mx-2">Romance</h6>
+        </div>
+
+        <div class="col-md-12">
+          <div class="owl-carousel owl-theme mt-2">
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage13"><img src="../image/daman.jpg">
+              <h5 class="text-center mt-2" id="h3-card">Daman</h5>
+            </div>
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage14"><img
+                src="../image/visakhapatnam.jpg">
+              <h5 class="text-center mt-2" id="h3-card">Visakhapatnam</h5>
+            </div>
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage15"><img
+                src="../image/ShamirpetLake.jpg">
+              <h5 class="text-center mt-2" id="h3-card">Puri</h5>
+            </div>
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage16"><img src="../image/OsmanSagar.webp">
+              <h5 class="text-center mt-2" id="h3-card">Malvan</h5>
+            </div>
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage17"><img
+                src="../image/SanjeevaiahPark.jpg">
+              <h5 class="text-center mt-2" id="h3-card">Arambol</h5>
+            </div>
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage18"><img src="../image/Charminar.webp">
+              <h5 class="text-center mt-2" id="h3-card">Mandrem</h5>
+            </div>
+            <div class="item" onclick="onClickHotel(this.id)" id="goToHotelPage19"><img src="../image/Charminar.webp">
+              <h5 class="text-center mt-2" id="h3-card">Vagatar</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <section class="container mt-3">
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -298,84 +371,89 @@
 
 
 
-<footer class="container mt-3 p-4 ">
-<hr class="mt-5" id="footer-hr">
-  <div class="row ">
-    <div class="col-md-6 m-auto">
-      <p id="footer-p"> © 2022 KRIMO Portfolio. All Rights Reserved | Design by <span class="text-black fst-italic">Kritika Sharma</span>
-         & <span class="text-dark fst-italic">Monika Jangid</p>
-    </div>  
-  </div>
-</footer>
+    <footer class="container mt-3 p-4 ">
+      <hr class="mt-5" id="footer-hr">
+      <div class="row ">
+        <div class="col-md-6 m-auto">
+          <p id="footer-p"> © 2022 KRIMO Portfolio. All Rights Reserved | Design by <span
+              class="text-black fst-italic">Kritika Sharma</span>
+            & <span class="text-dark fst-italic">Monika Jangid</p>
+        </div>
+      </div>
+    </footer>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" style="width: max-content;">
-    <div class="modal-content m-auto" style="width: max-content;">
-      <div class="modal-body bg-primary">
-        <div class="row">
-          <div class="text-white d-none d-md-block col-md-6">
-            <div class="d-flex p-0 p-md-5">
-              <h2>Find country to visit <br>according to your....</h2>
-            </div>
-          </div>
-          <div class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
-            <div class="d-flex flex-column bg-light rounded p-3">
-              <div class="mb-3">
-                <label for="countryName" class="form-label">Country</label>
-                <input type="text" list="suggestionListCountry" class="form-control" id="countryName" placeholder="Enter the country you want to search for...">
-                <datalist style="width: 500px;" id="suggestionListCountry">
-                  
-                </datalist>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="width: max-content;">
+        <div class="modal-content m-auto" style="width: max-content;">
+          <div class="modal-body bg-primary">
+            <div class="row">
+              <div class="text-white d-none d-md-block col-md-6">
+                <div class="d-flex p-0 p-md-5">
+                  <h2>Find country to visit <br>according to your....</h2>
+                </div>
               </div>
-              <button type="submit" onclick="findPlaces()" class="btn btn-primary">
-                <span>Find</span>
-                <!-- <img src="https://icons8.com/icon/59878/search" alt="findLogo"> -->
-                <!-- <img src="./image/search.png"> -->
-              </button>
+              <div class="col-sm-12 col-md-6 d-flex justify-content-center align-items-center">
+                <div class="d-flex flex-column bg-light rounded p-3">
+                  <div class="mb-3">
+                    <label for="countryName" class="form-label">Country</label>
+                    <input type="text" list="suggestionListCountry" class="form-control" id="countryName"
+                      placeholder="Enter the country you want to search for...">
+                    <datalist style="width: 500px;" id="suggestionListCountry">
+
+                    </datalist>
+                  </div>
+                  <button type="submit" onclick="findPlaces()" class="btn btn-primary">
+                    <span>Find</span>
+                    <!-- <img src="https://icons8.com/icon/59878/search" alt="findLogo"> -->
+                    <!-- <img src="./image/search.png"> -->
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
-<script src="../js/profileUpdate.js"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="../js/profileUpdate.js"></script>
 
-          <script>
-      $('.navbar-collapse a').click(function(){
-          $(".navbar-collapse").collapse('hide');
-      });
-  </script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-       $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    dots:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
+      $('.navbar-collapse a').click(function () {
+        $(".navbar-collapse").collapse('hide');
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: false,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 3
+          },
+          1000: {
+            items: 5
+          }
         }
-    }
-})
+      })
     </script>
 
     <script src="./hotel.js"></script>
     <script src="../index.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      crossorigin="anonymous"></script>
+</body>
+
 </html>
